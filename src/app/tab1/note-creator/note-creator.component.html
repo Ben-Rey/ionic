@@ -1,0 +1,9 @@
+<div class="form-wrapper">
+  <mat-form-field [style.width.px]="150">
+    <mat-label>Note</mat-label>
+    <input matInput value="" #message #newNote />
+  </mat-form-field>
+  <button mat-flat-button color="primary" (click)="addNewNote(newNote.value)">
+    Add
+  </button>
+</div>

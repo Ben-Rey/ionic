@@ -1,5 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { Note } from "./note";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-notes",
@@ -7,10 +6,7 @@ import { Note } from "./note";
   styleUrls: ["./notes.component.scss"],
 })
 export class NotesComponent implements OnInit {
-  note: Note = {
-    id: 1,
-    content: "This is a note",
-  };
+  @Input() notes: string[];
 
   constructor() {}
 

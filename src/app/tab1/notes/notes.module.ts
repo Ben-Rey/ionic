@@ -5,10 +5,9 @@ import { FormsModule } from "@angular/forms";
 import { IonicModule } from "@ionic/angular";
 
 import { NotesComponent } from "./notes.component";
-import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, MatInputModule],
+  imports: [CommonModule, FormsModule, IonicModule],
   declarations: [NotesComponent],
   exports: [NotesComponent],
 })
