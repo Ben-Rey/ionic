@@ -2,8 +2,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+}
+.wrap-actions {
+  height: 10vh;
+  width: 100%;
+  text-align: center;
 }
 
 .add-note-button {
   margin: 5%;
+}
+
+ion-content {
+  --overflow: hidden;
+  --background: url("https://i.pinimg.com/originals/a9/13/12/a91312b7e47b919309dbc014a21053cc.jpg");
+}
+ion-header {
+  text-align: center;
+  background-color: white;
+}
+
+ion-title {
+  --color: rgb(97 0 117);
 }

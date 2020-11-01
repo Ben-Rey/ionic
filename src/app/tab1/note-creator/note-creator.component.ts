@@ -15,7 +15,6 @@ export class NoteCreatorComponent implements OnInit {
   ngOnInit() {}
 
   addNewNote(value: string) {
-    console.log(value);
     this.newNoteEvent.emit(value);
   }
 }

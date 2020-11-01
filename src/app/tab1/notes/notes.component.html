@@ -1,3 +1,8 @@
-<div class="notes-wrapper">
-  <p *ngFor="let note of notes">{{ note }}</p>
+<div class="notes-wrapper" #container>
+  <mat-card
+    class="notes-card"
+    *ngFor="let note of notes"
+    (click)="DeleteNote(note)"
+    >{{ note.content }}</mat-card
+  >
 </div>

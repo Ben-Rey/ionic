@@ -1,3 +1,17 @@
+.notes {
+  &-wrapper {
+    padding: 5%;
+  }
+
+  &-card {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+}
 .notes-wrapper {
-  padding: 5%;
+  overflow: scroll;
+  max-height: 70vh;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

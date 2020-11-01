@@ -1,24 +1,30 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title text-center> NOTES </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="wrap-note-list">
-    <button
-      mat-flat-button
-      color="primary"
-      *ngIf="!createNote"
-      (click)="showListCreator()"
-      class="add-note-button"
-    >
-      Add a note
-    </button>
-    <app-note-creator
-      *ngIf="createNote"
-      (newNoteEvent)="addNote($event)"
-    ></app-note-creator>
-    <app-notes [notes]="notes"></app-notes>
+    <div class="wrap-actions">
+      <button
+        mat-flat-button
+        color="primary"
+        *ngIf="!createNote"
+        (click)="showListCreator()"
+        class="add-note-button"
+      >
+        Add a note
+      </button>
+      <app-note-creator
+        *ngIf="createNote"
+        (newNoteEvent)="addNote($event)"
+      ></app-note-creator>
+    </div>
+
+    <app-notes
+      [notes]="notes"
+      (deleteNoteEvent)="deleteNote($event)"
+    ></app-notes>
   </div>
 </ion-content>
